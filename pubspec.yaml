@@ -1,7 +1,7 @@
 name: ed25519_lib
 description: A lib for spacemesh.io ed25519 implementation using gomobile.
 version: 0.0.2
-homepage:
+homepage: https://github.com/andreivdev/ed_25519
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
