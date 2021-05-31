@@ -1,0 +1,22 @@
+PODS:
+  - ed25519_lib (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - ed25519_lib (from `.symlinks/plugins/ed25519_lib/ios`)
+  - Flutter (from `Flutter`)
+
+EXTERNAL SOURCES:
+  ed25519_lib:
+    :path: ".symlinks/plugins/ed25519_lib/ios"
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  ed25519_lib: 096f2b1dab17c12170701fc73fb99f235c56bc78
+  Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
+
+PODFILE CHECKSUM: b194357287b3fb4b7050082c1ee750386cf2abe8
+
+COCOAPODS: 1.10.1
