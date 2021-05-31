@@ -38,11 +38,18 @@ FOUNDATION_EXPORT NSData* _Nullable Ed25519ExtractPublicKey(NSData* _Nullable me
 // skipped function GenerateKey with unsupported parameter or return types
 
 
-// skipped function NewDerivedKeyFromSeed with unsupported parameter or return types
+/**
+ * NewDerivedKeyFromSeed calculates a private key from a 32 bytes random seed, an integer index and salt
+ */
+FOUNDATION_EXPORT NSData* _Nullable Ed25519NewDerivedKeyFromSeed(NSData* _Nullable seed, NSData* _Nullable index, NSData* _Nullable salt);
 
-
-// skipped function NewKeyFromSeed with unsupported parameter or return types
-
+/**
+ * NewKeyFromSeed calculates a private key from a seed. It will panic if
+len(seed) is not SeedSize. This function is provided for interoperability
+with RFC 8032. RFC 8032's private keys correspond to seeds in this
+package.
+ */
+FOUNDATION_EXPORT NSData* _Nullable Ed25519NewKeyFromSeed(NSData* _Nullable seed);
 
 // skipped function Sign with unsupported parameter or return types
 

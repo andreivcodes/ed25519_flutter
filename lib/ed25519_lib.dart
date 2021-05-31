@@ -35,4 +35,12 @@ class Ed25519Lib {
     final bool? result = await _channel.invokeMethod('Ed25519Verify2', argMap);
     return result;
   }
+
+  static Future<Uint8List?> newDerivedKeyFromSeed(
+      Uint8List seed, Uint8List index, Uint8List salt) async {
+    var argMap = <String, dynamic>{"seed": seed, "index": index, "salt": salt};
+    final Uint8List? result =
+        await _channel.invokeMethod('Ed25519NewDerivedKeyFromSeed', argMap);
+    return result;
+  }
 }

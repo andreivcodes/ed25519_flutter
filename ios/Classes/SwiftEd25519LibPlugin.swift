@@ -41,6 +41,19 @@ public class SwiftEd25519LibPlugin: NSObject, FlutterPlugin {
           return
         }
         result(Ed25519.Ed25519Verify2(publicKey.data,message.data,sig.data))
+      
+      case "Ed25519NewDerivedKeyFromSeed":
+        guard let arguments = call.arguments as? [String:FlutterStandardTypedData],
+        let seed:FlutterStandardTypedData = arguments["seed"],
+        let index:FlutterStandardTypedData = arguments["index"],
+        let salt:FlutterStandardTypedData = arguments["salt"]
+        else {
+          result("Wrong arguments")
+          return
+        }
+        result(Ed25519.Ed25519NewDerivedKeyFromSeed(seed.data,index.data,salt.data))
+
+
 
       default:
         result("err")
